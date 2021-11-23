@@ -46,8 +46,9 @@ public class UsuarioController {
     }
 
     @PutMapping
-    public void actualizar(@RequestBody UsuarioModel usuario){
-        usuarioService.save(usuario);
+    public String actualizar(@RequestBody UsuarioModel usuario){
+        usuarioService.update(usuario);
+        return ("Usuario con id: " + usuario.getId() + " Actualizado!!");
     }
 
 }
