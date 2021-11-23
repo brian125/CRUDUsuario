@@ -45,4 +45,9 @@ public class UsuarioController {
         }
     }
 
+    @PutMapping
+    public void actualizar(@RequestBody UsuarioModel usuario){
+        usuarioService.save(usuario);
+    }
+
 }
