@@ -16,8 +16,11 @@ public class UsuarioModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true,nullable = false)
     private Long id;
+    @Column
     private String nombre;
+    @Column
     private String email;
+    @Column
     private Integer prioridad;
 
 }
